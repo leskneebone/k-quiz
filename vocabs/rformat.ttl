@@ -1,0 +1,37 @@
+@prefix kquizrformat: <http://example.org/kquiz/vocab/rformat/> .
+@prefix kquizrformatcs: <http://example.org/kquiz/vocab/rformat> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+
+# Response Format Vocabulary (concept scheme)
+kquizrformatcs: a skos:ConceptScheme ;
+  schema:dateCreated "2026-08-17"^^xsd:date ;
+  schema:dateModified "2026-08-17"^^xsd:date ;
+  skos:prefLabel "Response Format Vocabulary"@en ;
+  skos:definition "A concept scheme representing the various formats for user responses." ;
+  rdfs:isDefinedBy <http://example.org/kquiz> ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizrformat:MultipleChoice a skos:Concept ;
+  skos:prefLabel "Multiple choice response"@en ;
+  skos:definition "A response format that provides multiple options for the user to choose from." ;
+  skos:inScheme kquizrformatcs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizrformat:TrueFalse a skos:Concept ;
+  skos:prefLabel "True/False response"@en ;
+  skos:definition "A response format that requires the user to determine whether a statement is true or false." ;
+  skos:inScheme kquizrformatcs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizrformat:ShortAnswer a skos:Concept ;
+  skos:prefLabel "Short answer response"@en ;
+  skos:definition "A response format that requires the user to provide a brief written response." ;
+  skos:inScheme kquizrformatcs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .

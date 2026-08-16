@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/kquiz/example/> .
+@prefix kquiz: <http://example.org/kquiz#> .
+@prefix kquizdom: <http://example.org/kquiz/vocab/domain/> .
+@prefix kquizqtype: <http://example.org/kquiz/vocab/qtype/> .
+@prefix kquizrformat: <http://example.org/kquiz/vocab/rformat/> .
+@prefix kquizassessmethod: <http://example.org/kquiz/vocab/assessmethod/> .
+@prefix kquizdifficulty: <http://example.org/kquiz/vocab/difficulty/> .
+
+# Example question instance (from kquiz-samples.ttl)
+ex:q27a a kquiz:Question ;
+  kquiz:domain kquizdom:RDFS ;
+  kquiz:questionType kquizqtype:Inference ;
+  kquiz:responseFormat kquizrformat:MultipleChoice ;
+  kquiz:assessmentMethod kquizassessmethod:ExactMatch ;
+  kquiz:difficulty kquizdifficulty:Medium ;
+  kquiz:prompt "Given the following statements, which additional statement is entailed?" ;
+  kquiz:hasOption ex:q27-a, ex:q27-b, ex:q27-c, ex:q27-d ;
+  kquiz:correctOption ex:q27-c .

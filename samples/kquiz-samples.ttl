@@ -1,0 +1,101 @@
+# kquiz-samples.ttl
+# Empty sample file created by Copilot CLI runtime in VS Code on 2026-08-17
+# Edit and paste your KQuiz content below.
+
+PREFIX ex: <http://example.org/kquiz/example/>PREFIX kquiz: <http://example.org/kquiz#>PREFIX kquizdom: <http://example.org/kquiz/vocab/domain/>PREFIX kquizdomcs: <http://example.org/kquiz/vocab/domain>PREFIX kquizqtype: <http://example.org/kquiz/vocab/qtype/>PREFIX kquizqtypecs: <http://example.org/kquiz/vocab/qtype>PREFIX kquizrformat: <http://example.org/kquiz/vocab/rformat/>PREFIX kquizrformatcs: <http://example.org/kquiz/vocab/rformat>PREFIX kquizassessmethod: <http://example.org/kquiz/vocab/assessmethod/>PREFIX kquizassessmethodcs: <http://example.org/kquiz/vocab/assessmethod>PREFIX kquizdifficulty: <http://example.org/kquiz/vocab/difficulty/>PREFIX kquizdifficultycs: <http://example.org/kquiz/vocab/difficulty>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>PREFIX owl: <http://www.w3.org/2002/07/owl#>PREFIX schema: <http://schema.org/>PREFIX dcterms: <http://purl.org/dc/terms/>PREFIX skos: <http://www.w3.org/2004/02/skos/core#>PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+kquiz: a owl:Ontology ;rdfs:label "K-Quiz Ontology" ;rdfs:comment "An ontology for representing questions in K-Quiz, a knowledge-based quiz system." ;schema:dateCreated "2026-08-17"^^xsd:date ;schema:dateModified "2026-08-17"^^xsd:date ;schema:creator <https://orcid.org/0000-0001-5640-3202> ;schema:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;schema:copyrightHolder <https://orcid.org/0000-0001-5640-3202> ;schema:copyrightYear "2026"^^xsd:gYear ;schema:copyrightNotice "© 2026 Les Kneebone. Licensed under CC BY-NC-SA 4.0." ;.
+
+# Classes
+
+kquiz:Question a rdfs:Class ;rdfs:label "Question" ;rdfs:comment "A class representing a question in a quiz." ;rdfs:isDefinedBy <http://example.org/kquiz> ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+# Properties
+
+kquiz:domain a rdfs:Property ;rdfs:label "domain" ;rdfs:comment "The domain or subject area of the question." ;rdfs:isDefinedBy <http://example.org/kquiz> ;rdfs:range skos:Concept ;rdfs:domain kquiz:Question ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquiz:questionType a rdfs:Property ;rdfs:label "question type" ;rdfs:comment "The type of the question." ;rdfs:isDefinedBy <http://example.org/kquiz> ;rdfs:range skos:Concept ;rdfs:domain kquiz:Question ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquiz:responseFormat a rdfs:Property ;rdfs:label "response format" ;rdfs:comment "The format in which the response to the question is expected, such as multiple choice, true/false, or short answer." ;rdfs:isDefinedBy <http://example.org/kquiz> ;rdfs:range skos:Concept ;rdfs:domain kquiz:Question ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquiz:assessmentMethod a rdfs:Property ;rdfs:label "assessment method" ;rdfs:comment "The method used to assess the correctness of the response, such as exact match, partial credit, or manual grading." ;rdfs:isDefinedBy <http://example.org/kquiz> ;rdfs:range skos:Concept ;rdfs:domain kquiz:Question ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquiz:difficulty a rdfs:Property ;rdfs:label "difficulty" ;rdfs:comment "The difficulty level of the question, such as easy, medium, or hard." ;rdfs:isDefinedBy <http://example.org/kquiz> ;rdfs:range skos:Concept ;rdfs:domain kquiz:Question ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquiz:prompt a rdfs:Property ;rdfs:label "prompt" ;rdfs:comment "The text of the question or prompt presented to the user." ;rdfs:isDefinedBy <http://example.org/kquiz> ;rdfs:range xsd:string ;rdfs:domain kquiz:Question ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquiz:hasOption a rdfs:Property ;rdfs:label "has option" ;rdfs:comment "The options available for the question, typically used in multiple-choice questions." ;rdfs:isDefinedBy <http://example.org/kquiz> ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquiz:correctOption a rdfs:Property ;rdfs:label "correct option" ;rdfs:comment "The correct option for the question, used to assess the user's response." ;rdfs:isDefinedBy <http://example.org/kquiz> ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+# skos concept schemes
+
+## Question Domain Vocabulary
+
+kquizdomcs: a skos:ConceptScheme ;schema:dateCreated "2026-08-17"^^xsd:date ;schema:dateModified "2026-08-17"^^xsd:date ;skos:prefLabel "Question Domain Vocabulary"@en ;skos:definition "A concept scheme representing the various domains or subject areas of questions." ;skos:hasTopConceptkquizdom:RDFS,kquizdom:OWL,kquizdom:SPARQL ,kquizdom:Turtle ;rdfs:isDefinedBy kquiz: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizdom:OWL a skos:Concept ;skos:prefLabel "OWL domain question"@en ;skos:definition "A question related to the OWL domain." ;skos:inScheme kquizdomcs: ;rdfs:isDefinedBy kquizdomcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date ;dcterms:references <https://www.w3.org/TR/owl2-overview/> .
+
+kquizdom:RDFS a skos:Concept ;skos:prefLabel "RDFS domain question"@en ;skos:definition "A question related to the RDFS domain." ;skos:inScheme kquizdomcs: ;rdfs:isDefinedBy kquizdomcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date ;dcterms:references <https://www.w3.org/TR/rdf-schema/> .
+
+kquizdom:SPARQL a skos:Concept ;skos:prefLabel "SPARQL domain question"@en ;skos:definition "A question related to the SPARQL domain." ;skos:inScheme kquizdomcs: ;rdfs:isDefinedBy kquizdomcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date ;dcterms:references <https://www.w3.org/TR/rdf-sparql-query/> .
+
+kquizdom:Turtle a skos:Concept ;skos:prefLabel "Turtle domain question"@en ;skos:definition "A question related to the Turtle domain." ;skos:inScheme kquizdomcs: ;rdfs:isDefinedBy kquizdomcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date ;dcterms:references <https://www.w3.org/TR/turtle/> .
+
+## Question Type Vocabulary
+
+kquizqtypecs: a skos:ConceptScheme ;schema:dateCreated "2026-08-17"^^xsd:date ;schema:dateModified "2026-08-17"^^xsd:date ;skos:prefLabel "Question Type Vocabulary"@en ;skos:definition "A concept scheme representing the various types of questions." ;skos:hasTopConcept kquizqtype:Inference, kquizqtype:Identification, kquizqtype:Completion, kquizqtype:Diagnosis, kquizqtype:Repair, kquizqtype:Selection, kquizqtype:Explanation, kquizqtype:Comparison .
+
+kquizqtype:Inference a skos:Concept ;skos:prefLabel "Inference question"@en ;skos:definition "A question that requires the user to make an inference based on given information." ;skos:inScheme kquizqtypecs: ;rdfs:isDefinedBy kquizqtypecs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Identification a skos:Concept ;skos:prefLabel "Identification question"@en ;skos:definition "A question that requires the user to identify a specific element or concept." ;skos:inScheme kquizqtypecs: ;rdfs:isDefinedBy kquizqtypecs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Completion a skos:Concept ;skos:prefLabel "Completion question"@en ;skos:definition "A question that requires the user to complete a statement or fill in the blank." ;skos:inScheme kquizqtypecs: ;rdfs:isDefinedBy kquizqtypecs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Diagnosis a skos:Concept ;skos:prefLabel "Diagnosis question"@en ;skos:definition "A question that requires the user to diagnose a problem or situation." ;skos:inScheme kquizqtypecs: ;rdfs:isDefinedBy kquizqtypecs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Repair a skos:Concept ;skos:prefLabel "Repair question"@en ;skos:definition "A question that requires the user to repair or correct an error." ;skos:inScheme kquizqtypecs: ;rdfs:isDefinedBy kquizqtypecs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Selection a skos:Concept ;skos:prefLabel "Selection question"@en ;skos:definition "A question that requires the user to select the correct option from a list." ;skos:inScheme kquizqtypecs: ;rdfs:isDefinedBy kquizqtypecs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Explanation a skos:Concept ;skos:prefLabel "Explanation question"@en ;skos:definition "A question that requires the user to provide an explanation or reasoning." ;skos:inScheme kquizqtypecs: ;rdfs:isDefinedBy kquizqtypecs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Comparison a skos:Concept ;skos:prefLabel "Comparison question"@en ;skos:definition "A question that requires the user to compare two or more items." ;skos:inScheme kquizqtypecs: ;rdfs:isDefinedBy kquizqtypecs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+## Response Format Vocabulary
+
+kquizrformatcs: a skos:ConceptScheme ;schema:dateCreated "2026-08-17"^^xsd:date ;schema:dateModified "2026-08-17"^^xsd:date ;skos:prefLabel "Response Format Vocabulary"@en ;skos:definition "A concept scheme representing the various formats for user responses." ;skos:hasTopConceptkquizrformat:MultipleChoice,kquizrformat:TrueFalse,kquizrformat:ShortAnswer ;rdfs:isDefinedBy kquiz: .
+
+kquizrformat:MultipleChoice a skos:Concept ;skos:prefLabel "Multiple choice response"@en ;skos:definition "A response format that provides multiple options for the user to choose from." ;skos:inScheme kquizrformatcs: ;rdfs:isDefinedBy kquizrformatcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizrformat:TrueFalse a skos:Concept ;skos:prefLabel "True/False response"@en ;skos:definition "A response format that requires the user to determine whether a statement is true or false." ;skos:inScheme kquizrformatcs: ;rdfs:isDefinedBy kquizrformatcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizrformat:ShortAnswer a skos:Concept ;skos:prefLabel "Short answer response"@en ;skos:definition "A response format that requires the user to provide a brief written response." ;skos:inScheme kquizrformatcs: ;rdfs:isDefinedBy kquizrformatcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+## Assessment Method Vocabulary
+
+kquizassessmethodcs: a skos:ConceptScheme ;schema:dateCreated "2026-08-17"^^xsd:date ;schema:dateModified "2026-08-17"^^xsd:date ;skos:prefLabel "Assessment Method Vocabulary"@en ;skos:definition "A concept scheme representing the various methods for assessing user responses." ;skos:hasTopConceptkquizassessmethod:ExactMatch,kquizassessmethod:PartialMatch,kquizassessmethod:SemanticMatch ;rdfs:isDefinedBy kquiz: .
+
+kquizassessmethod:ExactMatch a skos:Concept ;skos:prefLabel "Exact match assessment"@en ;skos:definition "An assessment method that requires the user's response to match the correct answer exactly." ;skos:inScheme kquizassessmethodcs: ;rdfs:isDefinedBy kquizassessmethodcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizassessmethod:PartialMatch a skos:Concept ;skos:prefLabel "Partial match assessment"@en ;skos:definition "An assessment method that allows for some flexibility in the user's response." ;skos:inScheme kquizassessmethodcs: ;rdfs:isDefinedBy kquizassessmethodcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizassessmethod:SemanticMatch a skos:Concept ;skos:prefLabel "Semantic match assessment"@en ;skos:definition "An assessment method that evaluates the semantic meaning of the user's response." ;skos:inScheme kquizassessmethodcs: ;rdfs:isDefinedBy kquizassessmethodcs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+# Difficulty Vocabulary
+
+kquizdifficultycs: a skos:ConceptScheme ;schema:dateCreated "2026-08-17"^^xsd:date ;schema:dateModified "2026-08-17"^^xsd:date ;skos:prefLabel "Question Difficulty Vocabulary"@en ;skos:definition "A concept scheme representing the difficulty levels of questions." ;skos:hasTopConceptkquizdifficulty:Easy,kquizdifficulty:Medium,kquizdifficulty:Hard ;rdfs:isDefinedBy kquiz: .
+
+kquizdifficulty:Easy a skos:Concept ;skos:prefLabel "Easy"@en ;skos:definition "A question that is easy to answer." ;skos:inScheme kquizdifficultycs: ;rdfs:isDefinedBy kquizdifficultycs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizdifficulty:Medium a skos:Concept ;skos:prefLabel "Medium"@en ;skos:definition "A question that is of medium difficulty." ;skos:inScheme kquizdifficultycs: ;rdfs:isDefinedBy kquizdifficultycs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizdifficulty:Hard a skos:Concept ;skos:prefLabel "Hard"@en ;skos:definition "A question that is difficult to answer." ;skos:inScheme kquizdifficultycs: ;rdfs:isDefinedBy kquizdifficultycs: ;dcterms:created "2026-08-17"^^xsd:date ;dcterms:modified "2026-08-17"^^xsd:date .
+
+# example question instance
+
+ex:q27a kquiz:Question ;kquiz:domain kquizdom:RDFS ;kquiz:questionType kquizqtype:Inference ;kquiz:responseFormat kquizrformat:MultipleChoice ;kquiz:assessmentMethod kquizassessmethod:ExactMatch ;kquiz:difficulty kquizdifficulty:Medium ;kquiz:prompt "Given the following statements, which additional statement is entailed?" ;kquiz:hasOption ex:q27-a, ex:q27-b, ex:q27-c, ex:q27-d ;kquiz:correctOption ex:q27-c .
+
+# Provenance
+
+<https://orcid.org/0000-0001-5640-3202>a schema:Person ;schema:name "Les Kneebone" ;schema:email "les.kneebone@example.com"^^xsd:anyURI .

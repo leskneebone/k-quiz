@@ -1,0 +1,70 @@
+@prefix kquizqtype: <http://example.org/kquiz/vocab/qtype/> .
+@prefix kquizqtypecs: <http://example.org/kquiz/vocab/qtype> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+
+# Question Type Vocabulary (concept scheme)
+kquizqtypecs: a skos:ConceptScheme ;
+  schema:dateCreated "2026-08-17"^^xsd:date ;
+  schema:dateModified "2026-08-17"^^xsd:date ;
+  skos:prefLabel "Question Type Vocabulary"@en ;
+  skos:definition "A concept scheme representing the various types of questions." ;
+  skos:hasTopConcept kquizqtype:Inference, kquizqtype:Identification, kquizqtype:Completion, kquizqtype:Diagnosis, kquizqtype:Repair, kquizqtype:Selection, kquizqtype:Explanation, kquizqtype:Comparison .
+
+kquizqtype:Inference a skos:Concept ;
+  skos:prefLabel "Inference question"@en ;
+  skos:definition "A question that requires the user to make an inference based on given information." ;
+  skos:inScheme kquizqtypecs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Identification a skos:Concept ;
+  skos:prefLabel "Identification question"@en ;
+  skos:definition "A question that requires the user to identify a specific element or concept." ;
+  skos:inScheme kquizqtypecs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Completion a skos:Concept ;
+  skos:prefLabel "Completion question"@en ;
+  skos:definition "A question that requires the user to complete a statement or fill in the blank." ;
+  skos:inScheme kquizqtypecs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Diagnosis a skos:Concept ;
+  skos:prefLabel "Diagnosis question"@en ;
+  skos:definition "A question that requires the user to diagnose a problem or situation." ;
+  skos:inScheme kquizqtypecs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Repair a skos:Concept ;
+  skos:prefLabel "Repair question"@en ;
+  skos:definition "A question that requires the user to repair or correct an error." ;
+  skos:inScheme kquizqtypecs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Selection a skos:Concept ;
+  skos:prefLabel "Selection question"@en ;
+  skos:definition "A question that requires the user to select the correct option from a list." ;
+  skos:inScheme kquizqtypecs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Explanation a skos:Concept ;
+  skos:prefLabel "Explanation question"@en ;
+  skos:definition "A question that requires the user to provide an explanation or reasoning." ;
+  skos:inScheme kquizqtypecs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
+
+kquizqtype:Comparison a skos:Concept ;
+  skos:prefLabel "Comparison question"@en ;
+  skos:definition "A question that requires the user to compare two or more items." ;
+  skos:inScheme kquizqtypecs: ;
+  dcterms:created "2026-08-17"^^xsd:date ;
+  dcterms:modified "2026-08-17"^^xsd:date .
