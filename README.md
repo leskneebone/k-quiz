@@ -1,4 +1,4 @@
-# K-Quiz — concept and design notes
+# K-Quiz
 
 ## 1. Core idea
 
