@@ -1,7 +1,5 @@
 # K-Quiz
 
-## 1. Core idea
-
 **K-Quiz** is a recurring, agent-generated quiz about RDF, knowledge
 graphs and the Semantic Web.
 
@@ -19,7 +17,7 @@ feeling like formal corporate training.
 
 ------------------------------------------------------------------------
 
-## 2. What the quiz is for
+## What the quiz is for
 
 The quiz should not primarily be thought of as a conventional training
 product.
@@ -47,7 +45,7 @@ for example, that is evidence that a concise KurrawongAI explainer on
 
 ------------------------------------------------------------------------
 
-## 3. Weekly communal model
+## Weekly communal model
 
 The shared weekly quiz is important.
 
@@ -83,7 +81,7 @@ later.
 
 ------------------------------------------------------------------------
 
-## 4. Ten questions
+## Ten questions
 
 Ten questions now seems preferable to six because a score such as
 **7/10** is immediately legible and ten questions allow a useful mixture
@@ -121,7 +119,7 @@ because it depends on obscure factual recall.
 
 ------------------------------------------------------------------------
 
-## 5. Domain versus question type
+## Domain versus question type
 
 An important modelling distinction emerged.
 
@@ -172,7 +170,7 @@ correct statement, or explain a result.
 
 ------------------------------------------------------------------------
 
-## 6. Response format is another dimension
+## Response format is another dimension
 
 "Multiple choice" is not really a question type in the same sense as
 "spot the problem".
@@ -216,7 +214,7 @@ Question
 
 ------------------------------------------------------------------------
 
-## 7. Assessment method is yet another dimension
+## Assessment method is yet another dimension
 
 Response format and assessment method should not be conflated.
 
@@ -247,7 +245,7 @@ comparing strings.
 
 ------------------------------------------------------------------------
 
-## 8. Feedback is distinct from assessment
+## Feedback is distinct from assessment
 
 Scoring and feedback should also be considered separately.
 
@@ -272,7 +270,7 @@ Each answer could include a concise explanation of:
 
 ------------------------------------------------------------------------
 
-## 9. Candidate question patterns
+## Candidate question patterns
 
 ### A. Recognition
 
@@ -414,7 +412,7 @@ And mean it seriously.
 
 ------------------------------------------------------------------------
 
-## 10. How obscure may the subject matter be?
+## How obscure may the subject matter be?
 
 Not every question needs to be limited to RDF/RDFS/OWL, but specialist
 knowledge should normally not be a prerequisite for answering.
@@ -493,7 +491,7 @@ challenge question.
 
 ------------------------------------------------------------------------
 
-## 11. Difficulty
+## Difficulty
 
 Difficulty should not simply mean increasingly obscure terminology.
 
@@ -536,7 +534,7 @@ genuinely impressive.
 
 ------------------------------------------------------------------------
 
-## 12. Agent-generated, but editor-checked
+## Agent-generated, but editor-checked
 
 Generating RDF questions is easy.
 
@@ -560,7 +558,7 @@ ten independently generated questions.
 
 ------------------------------------------------------------------------
 
-## 13. Towards a K-Quiz ontology
+## Towards a K-Quiz ontology
 
 The ontology could describe questions independently of the application
 used to render them.
@@ -628,7 +626,7 @@ This makes agent constraints expressive:
 
 ------------------------------------------------------------------------
 
-## 14. Potential longer-term capabilities
+## Potential longer-term capabilities
 
 Without needing these in the first prototype, the model could later
 support:
@@ -658,7 +656,7 @@ That moves the concept from a generic RDF quiz generator toward a
 
 ------------------------------------------------------------------------
 
-## 15. Product character
+## Product character
 
 The interface should avoid the aesthetics and language of corporate
 training.
@@ -688,4 +686,4 @@ It is:
 
 > "These people clearly know what they're talking about."
 
-And then, of course, question ten happens.
+And then, of course, question ten happens ;-)
